@@ -1,10 +1,10 @@
 # Hackbox
 Vagrant box to base hackathons on
 
-# Install vagrant
+## Install vagrant
 https://www.vagrantup.com/downloads.html
 
-# Run box
+## Run box
 ```$ vagrant up```
 
 Start coding with in the repo path and all the files will be synced with the /vagrant path in the guest box
