@@ -29,11 +29,12 @@ To start using:
 - add the need plugin
 - add the platform you'll be running the app on
 ```
+cd hacks
 ionic start project-name blank
 cd project-name
 ionic plugin add ../ImageDetectionCordovaPlugin
 ionic platform add android
 ```
-**And you ready to go...
+**And you ready to go...**
 
-Happy Coding**
+**Happy Coding**

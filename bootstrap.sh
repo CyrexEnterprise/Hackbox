@@ -19,9 +19,17 @@ mv $ANDROID_SDK_FILENAME /home/vagrant
 cd ~
 tar -xzvf $ANDROID_SDK_FILENAME
 sudo chown -R vagrant android-sdk-linux/
-echo "ANDROID_HOME=~/android-sdk-linux" >> /home/vagrant/.bashrc
-echo "PATH=\$PATH:~/android-sdk-linux/tools:~/android-sdk-linux/platform-tools" >> /home/vagrant/.bashrc
-
+echo "export ANDROID_HOME=/home/vagrant/android-sdk-linux" >> /home/vagrant/.bashrc
+echo "export PATH=$PATH:/home/vagrant/android-sdk-linux/tools" >> /home/vagrant/.bashrc
+echo "export PATH=$PATH:/home/vagrant/android-sdk-linux/platform-tools" >> /home/vagrant/.bashrc
+expect -c '
+set timeout -1   ;
+spawn /home/vagrant/android-sdk-linux/tools/android update sdk -u --all --filter extra,platform-tool,android-23,build-tools-23.0.3
+expect {
+    "Do you accept the license" { exp_send "y\r" ; exp_continue }
+    eof
+}
+'
 # install nvm
 sudo apt-get install -y git-core curl
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
@@ -33,7 +41,8 @@ nvm install 4.4.5
 nvm alias default 4.4.5
 
 # install cordova and ionic (beta version) globally
-npm install -g cordova ionic@beta
+npm install -g cordova
+npm install -g ionic@beta
 
 # create a directory to store the data at and symlink it to home
 cd /vagrant
