@@ -52,8 +52,14 @@ test -L hacks || ln -s /vagrant/hacks hacks
 
 # add plugin to folder
 cd hacks
-git clone https://github.com/Cloudoki/ImageDetectionCordovaPlugin.git
-# ionic start hackathon blank
-# cd hackathon
-# ionic plugin add https://github.com/Cloudoki/ImageDetectionCordovaPlugin.git
-# ionic platform add android
+expect -c '
+set timeout -1   ;
+spawn ionic start geohack blank
+expect {
+    "Create an Ionic Platform account to add features like User Authentication, Push Notifications, Live Updating, iOS builds, and more?" { exp_send "n\r" ; exp_continue }
+    eof
+}
+'
+cd geohack
+ionic plugin add cordova-plugin-geolocation
+ionic platform add android

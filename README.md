@@ -10,7 +10,7 @@ Install the latest version of [Vagrant](https://www.vagrantup.com/downloads.html
 $ vagrant up
 ```
 
-Start coding with in the repository path and all the files will be synced with the /vagrant path in the guest box
+Start coding in the repository path and all the files will be synced with the /vagrant path in the guest box
 
 If you need to run any program in the box, just SSH it:
 
@@ -18,23 +18,20 @@ If you need to run any program in the box, just SSH it:
 $ vagrant ssh
 ```
 
-In your home directory should be a folder named `hacks` where you can start creating your hacks.
+If you need to completly remove:
 
+```
+$ vagrant destroy
+$ vagrant box remove ubuntu/trusty32
+```
+
+In your home directory should be a folder named `hacks` where you can start creating your hacks.
+(this folder should be linked to an `hacks` folder in the root of this repository)
 
 ## Start using
 To start using:
 - enter the hack folder
-- start a new ionic application
-- go into the project folder
-- add the need plugin
-- add the platform you'll be running the app on
-```
-cd hacks
-ionic start project-name blank
-cd project-name
-ionic plugin add ../ImageDetectionCordovaPlugin
-ionic platform add android
-```
-**And you ready to go...**
+- enter geohack folder
+- start hacking
 
 **Happy Coding**
