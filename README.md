@@ -34,4 +34,17 @@ To start using:
 - enter geohack folder
 - start hacking
 
+## Connect to device
+To test if device is connected, you can run (from the box):
+
+```
+sudo /home/vagrant/android-sdk-linux/platform-tools/adb devices
+```
+If that does not work, or shows ????? permissions, then try running:
+```
+sudo /home/vagrant/android-sdk-linux/platform-tools/adb kill-server
+sudo /home/vagrant/android-sdk-linux/platform-tools/adb start-server
+sudo /home/vagrant/android-sdk-linux/platform-tools/adb devices
+```
+
 **Happy Coding**
