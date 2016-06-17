@@ -57,9 +57,7 @@ Vagrant.configure(2) do |config|
   # View the documentation for the provider you are using for more
   # information on available options.
   config.vm.provider "virtualbox" do |v|
-    # v.memory = 2048
-    v.customize ["modifyvm", :id, "--usb", "on"]
-    v.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
+    v.memory = 2048
   end
 
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies

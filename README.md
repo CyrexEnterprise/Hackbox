@@ -22,7 +22,7 @@ If you need to completly remove:
 
 ```
 $ vagrant destroy
-$ vagrant box remove ubuntu/trusty32
+$ vagrant box remove ubuntu/trusty64
 ```
 
 In your home directory should be a folder named `hacks` where you can start creating your hacks.
@@ -32,19 +32,15 @@ In your home directory should be a folder named `hacks` where you can start crea
 To start using:
 - enter the hack folder
 - enter geohack folder
+- start ionic serve
+- choose **option 1 eth0** (an ip address)
+
+```
+cd hacks/geohack
+ionic serve
+```
+
+- open your browser in ```http://localhost:8100/```
 - start hacking
-
-## Connect to device
-To test if device is connected, you can run (from the box):
-
-```
-sudo /home/vagrant/android-sdk-linux/platform-tools/adb devices
-```
-If that does not work, or shows ????? permissions, then try running:
-```
-sudo /home/vagrant/android-sdk-linux/platform-tools/adb kill-server
-sudo /home/vagrant/android-sdk-linux/platform-tools/adb start-server
-sudo /home/vagrant/android-sdk-linux/platform-tools/adb devices
-```
 
 **Happy Coding**
