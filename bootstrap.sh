@@ -30,8 +30,12 @@ expect -c '
 set timeout -1   ;
 spawn ionic start geohack blank
 expect {
-    "Create an Ionic Platform account to add features like User Authentication, Push Notifications, Live Updating, iOS builds, and more?" { exp_send "n\r" ; exp_continue }
-    eof
+    "Would you like to overwrite the directory with this new project?" {
+      exp_send "yes\r" ; exp_continue
+    }
+    "Create an Ionic Platform account to add features like User Authentication, Push Notifications, Live Updating, iOS builds, and more?" {
+      exp_send "n\r" ; exp_continue
+    }
 }
 '
 cd geohack
