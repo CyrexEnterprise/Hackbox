@@ -28,16 +28,13 @@ In your home directory should be a folder named `hacks` where you can start crea
 ## Start using
 To start using:
 - enter the hack folder
-- enter hack_project folder
-- start ionic serve
-- choose **option 1 eth0** (an ip address)
+- enter rfid-api folder
 
 ```
-cd hacks/hack_project
-ionic serve
+cd hacks/rfid-api
 ```
 
-- open your browser in ```http://localhost:8100/```
+- open your browser in ```http://localhost:8080/```
 - start hacking
 
 **Happy Coding**
