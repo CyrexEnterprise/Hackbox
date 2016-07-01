@@ -26,10 +26,7 @@ In your home directory should be a folder named `hacks` where you can start crea
 (this folder should be linked to an `hacks` folder in the root of this repository)
 
 ## rfid-api
-The api is being server on
-```
-http://localhost:8931/
-```
+The api is being server on `http://localhost:8931/`
 
 ## Start using
 To start using:
@@ -41,7 +38,8 @@ $ cd hacks/rfid-board
 $ npm run static
 ```
 
-- open your browser in ```http://localhost:8080/```
+- open your browser in `http://localhost:8080/` to access rfid-board
+- open your browser in `http://localhost:8931/1/ping` to test rfid-api
 - start hacking
 
 ### Note
