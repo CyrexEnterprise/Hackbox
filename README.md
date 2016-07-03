@@ -29,11 +29,11 @@ In your home directory should be a folder named `hacks` where you can start crea
 To start using:
 - enter vagrant machine
 - enter the hack folder
-- enter react folder
+- enter angular2 folder
 
 ```
 $ vagrant ssh
-$ cd hacks/react
+$ cd hacks/angular2
 $ npm run dev
 ```
 

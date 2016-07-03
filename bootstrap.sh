@@ -22,7 +22,7 @@ test -L hacks || ln -s /vagrant/hacks hacks
 
 # add project to folder
 cd hacks
-sudo cp -vr ../react ./
+sudo cp -vr ../angular2 ./
 cd react
 npm install -g webpack babel --no-optional
 npm install --no-optional --no-bin-links
