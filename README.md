@@ -25,27 +25,19 @@ $ vagrant box remove ubuntu/trusty64
 In your home directory should be a folder named `hacks` where you can start creating your hacks.
 (this folder should be linked to an `hacks` folder in the root of this repository)
 
-## rfid-api
-The api is being server on `http://localhost:8931/`
-
 ## Start using
 To start using:
+- enter vagrant machine
 - enter the hack folder
-- enter rfid-board folder
+- enter react folder
 
 ```
-$ cd hacks/rfid-board
-$ npm run static
+$ vagrant ssh
+$ cd hacks/react
+$ npm run dev
 ```
 
-- open your browser in `http://localhost:8080/` to access rfid-board
-- open your browser in `http://localhost:8931/1/ping` to test rfid-api
+- open your browser in `http://localhost:8080/`
 - start hacking
-
-### Note
-To stop the server hit
-```
-CTRL-C
-```
 
 **Happy Coding**
