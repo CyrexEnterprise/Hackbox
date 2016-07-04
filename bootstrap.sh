@@ -2,7 +2,7 @@
 
 # git, expect
 sudo apt-get update
-sudo apt-get install -y git expect build-essentials
+sudo apt-get install -y git expect build-essential
 
 # install nvm
 sudo apt-get install -y git-core curl
@@ -25,6 +25,6 @@ cd hacks
 sudo cp -vr ../react ./
 cd react
 npm install -g webpack babel --no-optional
-npm install --no-optional --no-bin-links
+npm install --no-optional
 
 echo "------ done ------"
