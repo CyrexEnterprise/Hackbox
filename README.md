@@ -34,10 +34,10 @@ To start using:
 ```
 $ vagrant ssh
 $ cd hacks/angular2
-$ npm run dev
+$ npm run start
 ```
 
-- open your browser in `http://localhost:8080/`
+- open your browser in `http://localhost:3000/`
 - start hacking
 
 **Happy Coding**

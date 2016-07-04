@@ -2,7 +2,7 @@
 
 # git, expect
 sudo apt-get update
-sudo apt-get install -y git expect build-essentials
+sudo apt-get install -y git expect build-essential
 
 # install nvm
 sudo apt-get install -y git-core curl
@@ -23,7 +23,7 @@ test -L hacks || ln -s /vagrant/hacks hacks
 # add project to folder
 cd hacks
 sudo cp -vr ../angular2 ./
-cd angular2
-npm install
+cd react
+npm install --no-optional
 
 echo "------ done ------"
