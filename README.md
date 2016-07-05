@@ -37,7 +37,7 @@ $ cd hacks/react
 $ npm run dev
 ```
 
-- open your browser in `http://localhost:8080/`
+- open your browser in `http://localhost:8000/`
 - start hacking
 
 **Happy Coding**

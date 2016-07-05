@@ -14,17 +14,12 @@ source /home/vagrant/.profile
 nvm install 6.2.2
 nvm alias default 6.2.2
 
-# create a directory to store the data at and symlink it to home
-cd /vagrant
-mkdir -p hacks
-cd ~
-test -L hacks || ln -s /vagrant/hacks hacks
-
 # add project to folder
+mkdir hacks
 cd hacks
-sudo cp -vr ../react ./
+sudo cp -vr /vagrant/react ./
+sudo chown -R vagrant:vagrant ./
 cd react
-npm install -g webpack babel --no-optional
-npm install --no-optional
-
+npm install -g webpack
+npm install
 echo "------ done ------"

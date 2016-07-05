@@ -24,9 +24,7 @@ Vagrant.configure(2) do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.network "forwarded_port", guest: 80, host: 8931, auto_correct: true
-  config.vm.network "forwarded_port", guest: 8080, host: 8080, auto_correct: true
-
+  config.vm.network "forwarded_port", guest: 8080, host: 8000, auto_correct: true
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -42,6 +40,7 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "./hacks/", "/home/vagrant/hacks/react/project"#, create: true, group: "vagrant", owner: "vagrant"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
