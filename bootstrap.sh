@@ -16,11 +16,12 @@ nvm alias default 6.2.2
 
 # add project to folder
 
+mkdir hacks
 cd hacks
 sudo cp -vr /vagrant/angular2 ./
 sudo chown -R vagrant:vagrant ./
 cd angular2
 npm install -g typescript typings
-npm install --dev
+npm install
 
 echo "------ done ------"

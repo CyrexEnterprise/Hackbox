@@ -37,7 +37,7 @@ $ cd hacks/angular2
 $ npm run start
 ```
 
-- open your browser in `http://localhost:3000/`
+- open your browser in `http://localhost:8000/`
 - start hacking
 
 **Happy Coding**
