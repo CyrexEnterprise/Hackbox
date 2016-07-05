@@ -40,4 +40,10 @@ $ npm run start
 - open your browser in `http://localhost:8000/`
 - start hacking
 
+## Resources
+- https://angular.io/docs/ts/latest/quickstart.html
+- https://angular.io/docs/ts/latest/tutorial/index.html
+- https://egghead.io/lessons/angular-2-writing-a-simple-angular-2-component
+- https://www.youtube.com/watch?v=HTFZPF6iixA&list=PLgGUMhSgtxJyIQ4vI3BzlCzZLHL79Ew6p
+
 **Happy Coding**
