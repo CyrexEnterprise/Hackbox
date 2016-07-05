@@ -1,0 +1,30 @@
+<pre>{{diagnostic}}</pre>
+<div class="container">
+  <h1>Add Weapon</h1>
+  <form *ngIf="active" (ngSubmit)="onSubmit()" #weaponForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text"  class="form-control" required
+				[(ngModel)]="model.name" name="name" placeholder="weapon name">
+    </div>
+    <div class="form-group">
+		  <label for="type">Type</label>
+		  <select class="form-control" required
+		  	[(ngModel)]="model.type" name="type" placeholder="weapon type">
+		  	<option value="" disabled selected>Select your option</option>
+		    <option *ngFor="let t of types" [value]="t">{{t}}</option>
+		  </select>
+		</div>
+		<div class="form-group">
+		  <label for="category">Category</label>
+		  <select class="form-control" required
+		  	[(ngModel)]="model.category" name="category" placeholder="weapon category">
+		  	<option value="" disabled selected>Select your option</option>
+		    <option *ngFor="let c of categories" [value]="c">{{c}}</option>
+		  </select>
+		</div>
+    <button type="submit" class="btn btn-primary" [disabled]="!weaponForm.form.valid">Add</button>
+    <button type="button" class="btn btn-success" (click)="newWeapon()">New Weapon</button>
+  </form>
+</div>
+<br>

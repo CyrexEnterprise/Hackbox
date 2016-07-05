@@ -1,0 +1,23 @@
+<div class="tl-split-body-outer">
+	<div class="tl-split-body">
+		<h4>Hello from the {{componentName}}!</h4>
+		<p *ngIf="weapons.length === 0">There are no weapons!</p>
+		<div *ngIf="weapons_error">error</div>
+		<div class="app-card">
+			<div>Total: <strong>{{weapons.length}}</strong></div>
+		</div>
+
+		<weapon-form name="newWeaponForm" (onCreated)="onCreated($event)"></weapon-form>
+
+		<div class="app-card weapon" (click)="info($event)" *ngFor="let w of weapons; let i=index">
+			<div class="row">
+				<div class="index col-sm-2">{{i}}</div>
+				<div class="name col-sm-4 type-{{w.category}}">{{w.name}}</div>
+				<div class="type col-sm-4">{{w.type}}</div>
+				<div class="actions col-sm-2">
+					<div class="delete btn btn-danger btn-sm btn-block" (click)="delete($event, i)">delete</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

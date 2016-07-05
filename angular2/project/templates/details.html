@@ -1,0 +1,76 @@
+<div class="tl-split-body-outer">
+    <div class="tl-split-body" id="details-page">
+    	<div class="details-text">Have you found a typo, or changed address? You may now change your details yourself. But note that only future documents will use the new information. If you want something changed on current documents, use the feedback tab.</div>
+
+        <div class="json">{{details | json}}</div>
+
+    	<form class="form-horizontal" (ngSubmit)="onSubmit(detailsForm)" #detailsForm="ngForm">
+    		<div class="row">
+    			<div class="col-sm-6">
+    				<div class="form-group">
+                        <div for="name" class="col-xs-4 control-label subtitle">First name</div>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" placeholder="First name" data-attr="firstname" name="firstname" [ngModel]="details.firstname">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div for="name" class="col-xs-4 control-label subtitle">Last name</div>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" placeholder="Last name" data-attr="lastname" name="lastname" [ngModel]="details.lastname">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div for="name" class="col-xs-4 control-label subtitle">Email</div>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" placeholder="email" data-attr="email" name="email" [ngModel]="details.email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div for="name" class="col-xs-4 control-label subtitle">Tel.</div>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" placeholder="Phone" data-attr="phone" name="phone" [ngModel]="details.phone">
+                        </div>
+                    </div>
+    			</div>
+    			<div class="col-sm-6">
+    				<div class="form-group">
+                        <div for="name" class="col-xs-4 control-label subtitle">Address</div>
+                        <div class="col-xs-5">
+                            <input type="text" class="form-control" placeholder="Street" data-attr="street" name="street" [ngModel]="details.address.street">
+                        </div>
+                        <div class="col-xs-3">
+                            <input type="text" class="form-control" placeholder="Number" data-attr="number" name="number" [ngModel]="details.address.number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div for="name" class="col-xs-4 control-label subtitle"></div>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" placeholder="ZIP" data-attr="zip" value="{{zip}}" name="zip" [ngModel]="details.address.zip">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div for="name" class="col-xs-4 control-label subtitle"></div>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" placeholder="City" data-attr="city" value="{{city}}" name="city" [ngModel]="details.address.city">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div for="name" class="col-xs-4 control-label subtitle">VAT</div>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" placeholder="VAT" data-attr="vat" value="123" pattern="[0-9]+">
+                        </div>
+                    </div>
+    			</div>
+    		</div>
+    	</form>
+
+    </div>
+    <div class="tl-split-footer">
+    	<div class="pull-left tl-btn-container">
+    		<button class="tl-btn fluid transparent" data-action="back" id="back-to-quotation"><i class="fa fa-angle-left"></i> back to quotation</button>
+    	</div>
+    	<div class="pull-right text-right tl-btn-container">
+    		<button class="tl-btn fluid secondaryed" data-action="save" id="save-details" (click)="save(detailsForm)">save changes</button>
+    	</div>
+    </div>
+</div>

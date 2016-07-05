@@ -1,0 +1,15 @@
+<div class="tl-split-body">
+	<h4>Hello from the {{componentName}}!</h4>
+	 <p *ngIf="armor.length === 0">There are no more armor!</p>
+	<div *ngIf="armor_error">error</div>
+	<div class="app-card armor" (click)="info($event)" *ngFor="let w of armor; let i=index">
+		<div class="row">
+			<div class="index col-sm-2">{{i}}</div>
+			<div class="name col-sm-4 type-{{w.category}}">{{w.name}}</div>
+			<div class="type col-sm-4">{{w.type}}</div>
+			<div class="actions col-sm-2">
+				<div class="delete btn btn-danger btn-sm btn-block" (click)="delete($event, i)">delete</div>
+			</div>
+		</div>
+	</div>
+</div>

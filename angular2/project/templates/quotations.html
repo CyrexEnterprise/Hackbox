@@ -1,0 +1,44 @@
+<div class="tl-split-body-outer">
+	<div class="tl-split-body">
+	<div class="dropdown visible-sm visible-md visible-lg text-right">
+		<button class="tl-drop text-drop" type="button" data-toggle="dropdown" aria-expanded="false">
+			<span data-action-selected="All quotations">{{filter.name}}</span>
+			<span class="fa fa-chevron-down text-primary"></span></button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li *ngFor="let f of filters"><a (click)="filterSelect($event, f)">{{f.name}}</a></li>
+			</ul>
+	</div>
+	<div class="json mb-20">{{filter | json}}</div>
+
+  <div class="tl-card quotation-detail" [hidden]="filter.status != q.status && filter.status != 'all'" *ngFor="let q of quotations; let i=index">
+		<div class="tl-card-body tl-table">
+			<div>
+				<div class="title text-primary">{{q.year}}/{{q.number}} - {{q.cost}}</div>
+				<div class="subtitle">Project: {{q.project}} {{q.status == filter.status || filter.status == 'all'}}</div>
+			</div>
+			<div>
+				<div class="subtitle">{{q.date | date: 'dd/mm/yyyy hh:mm'}}</div>
+				<div class="subtitle" [class.text-success]="q.status == 'accepted'" [class.text-pending]="q.status == 'pending'" [class.text-error]="q.status == 'overdue'"><strong><em>Status: {{q.status}}</em></strong></div>
+			</div>
+			<div>
+				<i style="display: none" class="fa fa-chevron-right" aria-hidden="true"></i>
+				<a href="#" id="view-offer" (click)="onSelect($event, q)">
+					VIEW THIS OFFER
+				</a>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<div class="tl-split-footer no-padding">
+	<div class="dropup visible-xs">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    	<span class="fa fa-chevron-up text-primary"></span>
+      <span data-action-selected="All quotations">{{filter.name}}</span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <li *ngFor="let f of filters"><a (click)="filterSelect($event, f)">{{f.name}}</a></li>
+    </ul>
+  </div>
+	</div>
+</div>

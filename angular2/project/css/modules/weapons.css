@@ -1,0 +1,21 @@
+.weapon {
+	margin-bottom: 10px !important;
+}
+
+.weapon .row > div {
+  line-height: 2;
+}
+
+.weapon .row > div.type {
+  text-transform: uppercase;
+}
+
+.weapon .row > div.actions {
+  text-align: right;
+  font-size: 14px;
+}
+
+.weapon .row > div.actions > div {
+  cursor: pointer;
+  text-align: center;
+}

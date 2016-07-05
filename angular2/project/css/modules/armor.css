@@ -1,0 +1,21 @@
+.armor {
+	margin-bottom: 10px !important;
+}
+
+.armor .row > div {
+  line-height: 2;
+}
+
+.armor .row > div.type {
+  text-transform: uppercase;
+}
+
+.armor .row > div.actions {
+  text-align: right;
+  font-size: 14px;
+}
+
+.armor .row > div.actions > div {
+  cursor: pointer;
+  text-align: center;
+}

@@ -1,0 +1,39 @@
+<div class="tl-split-body-outer">
+  <div class="tl-split-body">
+  	<form id="ticket-message" class="form-horizontal" (ngSubmit)="onSubmit()" #feedbackForm="ngForm">
+      <div class="">
+        <div class="">
+          <div class="json mb-20">{{model | json}}</div>
+          <textarea id="feedback-message" placeholder="Give us feedback about this quotation…" required [(ngModel)]="model.text" name="message"></textarea>
+        </div>
+        <div class="ticket-attachments"><ul></ul></div>
+        <div class="tl-card-footer text-right">
+          <input type="file" name="file" style="display:none;" multiple>
+          <button type="button" id="" class="tl-btn transparent" (click)="attachment()">Add attachment</button>
+          <button type="button" id="" class="tl-btn transparent" (click)="newFeedback()">reset</button>
+          <button type="submit" class="tl-btn secondaryed" id="send-feedback">Add</button>
+        </div>
+      </div>
+    </form>
+  	<div class="tl-card full feedback">
+  		<div class="tl-card-body feedback-list">
+        <div *ngFor="let f of feedback" class="feedback-item">
+          <div class="user-avatar {{f.user.role}}">
+            <img src="{{f.user.avatar}}">
+          </div>
+          <div class="feedback-detail">
+            <div class="header">
+              <div class="title">{{f.user.name}} {{f.user.role}}</div>
+              <div class="subtitle pull-right">{{f.date | date: 'dd/MM/yyyy HH:mm'}}</div>
+            </div>
+            <div class="subtitle" [innerHTML]="f.text"></div>
+          </div>
+        </div>  
+      </div>
+  	</div>
+  </div>
+  <div class="tl-split-footer text-left">
+  	<button class="tl-btn transparent" data-action="back" id="back-to-quotation"><i class="fa fa-angle-left"></i> back</button>
+  </div>
+
+</div>

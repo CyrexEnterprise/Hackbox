@@ -6,10 +6,8 @@ var app_routes_1 = require('./app.routes');
 // Add these symbols to override the `LocationStrategy`
 var common_1 = require('@angular/common');
 var forms_1 = require('@angular/forms');
-var base_service_1 = require('./base.service');
 var app_component_1 = require('./app.component');
 platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [
-    base_service_1.BaseService,
     http_1.HTTP_PROVIDERS,
     app_routes_1.APP_ROUTER_PROVIDERS,
     forms_1.disableDeprecatedForms(),

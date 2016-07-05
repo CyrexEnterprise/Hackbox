@@ -1,0 +1,29 @@
+<header></header>
+<section id="main-content">
+	<div class="loading-ui"></div>
+	<div class="tl-split-view">
+		<div class="tl-split-content">
+			<div class="tl-header-container">
+				<div class="tl-header">
+					<div class="tl-header-logo">
+						<a href="#" id="home"><img src="images/tl_logo.png"></a>
+					</div>
+					<div class="tl-header-right">
+						<div class="header-title"></div>
+						<div class="muted smaller header-subtitle"></div>
+					</div>
+				</div>
+				<div class="tl-header-menu">
+					<ul class="menu-items">
+						<li><a (click)="menuChange(false)" routerLink="feedback" id="feedback">Feedback</a></li>
+						<li><a (click)="menuChange(true)" routerLink="quotations" id="quotations">Your quotations</a></li>
+						<li><a (click)="menuChange(false)" routerLink="details" id="details">Your details</a></li>
+						<li><a (click)="logout()" routerLink="more" id="">Logout</a></li>
+					</ul>	
+				</div>
+			</div>
+			<div class="tl-split-body-wrapper" [class.no-footer]="footerHidden"><router-outlet></router-outlet></div>
+		</div>
+		<div class="tl-split-bg"></div>
+	</div>
+</section>
