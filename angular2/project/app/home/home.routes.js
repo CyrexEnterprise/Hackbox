@@ -1,6 +1,6 @@
 "use strict";
 var home_component_1 = require('./home.component');
-var details_component_1 = require('../details/details.component');
+var dummy_component_1 = require('../dummy.component');
 exports.HomeRoutes = [
     { path: '', redirectTo: '/home', terminal: true },
     {
@@ -9,7 +9,7 @@ exports.HomeRoutes = [
         children: [
             {
                 path: '',
-                component: details_component_1.DetailsComponent
+                component: dummy_component_1.DummyComponent
             }
         ]
     }

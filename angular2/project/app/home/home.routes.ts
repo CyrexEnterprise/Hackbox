@@ -1,6 +1,6 @@
 import { RouterConfig }         from '@angular/router';
 import { HomeComponent }     		from './home.component';
-import { DetailsComponent }     from '../details/details.component';
+import { DummyComponent }     from '../dummy.component';
 
 export const HomeRoutes: RouterConfig = [
   { path: '', redirectTo: '/home', terminal: true },
@@ -10,7 +10,7 @@ export const HomeRoutes: RouterConfig = [
     children: [
       {
         path: '',
-        component: DetailsComponent
+        component: DummyComponent
       }
     ]
   }
