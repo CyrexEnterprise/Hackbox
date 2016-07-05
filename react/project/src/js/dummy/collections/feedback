@@ -1,0 +1,49 @@
+{
+	"feedback": [
+		{
+			"id": 1,
+			"text": "Beste klant,<br> U moet zich hier geen zorgen over maken. Komt allemaal keihard in orde!",
+			"date": "",
+			"date": "2016-04-05T09:08:07+00:00",
+			"user": {
+				"id": 1,
+				"role": "client",
+				"name": "User name",
+				"avatar": "http://placehold.it/100x100"
+			}
+		},
+		{
+			"id": 2,
+			"text": "Beste klant,<br> U moet zich hier geen zorgen over maken. Komt allemaal keihard in orde!",
+			"date": "2016-04-05T09:08:07+00:00",
+			"user": {
+				"id": 1,
+				"role": "enterprise",
+				"name": "User name",
+				"avatar": "http://placehold.it/100x100"
+			}
+		},
+		{
+			"id": 3,
+			"text": "Beste klant,<br> U moet zich hier geen zorgen over maken. Komt allemaal keihard in orde!",
+			"date": "2016-04-05T09:08:07+00:00",
+			"user": {
+				"id": 1,
+				"role": "client",
+				"name": "User name",
+				"avatar": "http://placehold.it/100x100"
+			}
+		},
+		{
+			"id": 4,
+			"text": "Beste klant,<br> U moet zich hier geen zorgen over maken. Komt allemaal keihard in orde!",
+			"date": "2016-04-05T09:08:07+00:00",
+			"user": {
+				"id": 1,
+				"role": "enterprise",
+				"name": "User name",
+				"avatar": "http://placehold.it/100x100"
+			}
+		}
+	]
+}
