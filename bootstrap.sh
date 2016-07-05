@@ -14,16 +14,13 @@ source /home/vagrant/.profile
 nvm install 6.2.2
 nvm alias default 6.2.2
 
-# create a directory to store the data at and symlink it to home
-cd /vagrant
-mkdir -p hacks
-cd ~
-test -L hacks || ln -s /vagrant/hacks hacks
-
 # add project to folder
+
 cd hacks
-sudo cp -vr ../angular2 ./
-cd react
-npm install --no-optional
+sudo cp -vr /vagrant/angular2 ./
+sudo chown -R vagrant:vagrant ./
+cd angular2
+npm install -g typescript typings
+npm install --dev
 
 echo "------ done ------"
