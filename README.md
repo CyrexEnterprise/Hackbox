@@ -40,4 +40,12 @@ $ npm run dev
 - open your browser in `http://localhost:8000/`
 - start hacking
 
+## Resources
+- https://facebook.github.io/react/
+- https://www.youtube.com/watch?v=MhkGQAoc7bc
+- https://facebook.github.io/flux/docs/overview.html
+- https://babeljs.io/docs/learn-es2015/
+- https://www.oreilly.com/learning/intro-to-react-and-effective-design-patterns
+- http://andrewhfarmer.com/react-ajax-best-practices/
+
 **Happy Coding**
