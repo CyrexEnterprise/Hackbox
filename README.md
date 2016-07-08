@@ -36,11 +36,46 @@ To start using:
 - choose **option 1 eth0** (an ip address)
 
 ```
-cd hacks/geohack
-ionic serve
+$ cd hacks/geohack
+$ ionic serve
 ```
 
 - open your browser in ```http://localhost:8100/```
+
+<hr>
+You can sync your data. Just copy it into `ionic-heatmap` folder in the hacks folder and push it using git.
+
+**Note:**
+Before runnig this commands you'll mostt likely need to tell git who you are by running and adding you github account information:
+```
+$ git config --global user.email "you@example.com"
+$ git config --global user.name "Your Name"
+```
+
+Using the commands bellow you will:
+- Get the latest data from the repository if there's any.
+```
+$ cd /home/vagrant/hacks/ionic-heatmap
+$ git pull
+```
+
+- Add all the new data you just added.
+```
+$ git add --all
+```
+
+- Commit the changes to your local git with a message.
+```
+$ git commit -m "adding more data"
+```
+
+- Push all the changes to the remote repository.
+```
+$ git push origin master
+```
+- You'll be prompt to enter your github username and password.
+<hr>
+
 - start hacking
 
 **Happy Coding**

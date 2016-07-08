@@ -2,7 +2,7 @@
 
 # install git
 sudo apt-get update
-sudo apt-get install -y git ant expect
+sudo apt-get install -y git expect
 
 # install nvm
 sudo apt-get install -y git-core curl
@@ -40,3 +40,6 @@ expect {
 '
 cd geohack
 ionic plugin add cordova-plugin-geolocation
+
+cd ..
+git clone https://github.com/TUIHackfridays/ionic-heatmap.git
