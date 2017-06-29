@@ -36,4 +36,4 @@ node_modules
 .vagrant
 
 # ignore shared folder
-hacks
+react-redux-donderstarter
