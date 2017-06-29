@@ -1,38 +1,24 @@
 # install git
 sudo apt-get update
-sudo apt-get install -y git ant expect
+sudo apt-get install -y git git-core
 
 # install nvm
-sudo apt-get install -y git-core curl
+sudo apt-get install -y curl
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
 echo "source /home/vagrant/.nvm/nvm.sh" >> /home/vagrant/.profile
 source /home/vagrant/.profile
 
-# install node 4.4.5 LTS
-nvm install 4.4.5
-nvm alias default 4.4.5
+# install node 5.10.0
+nvm install 5.10.0
+nvm alias default 5.10.0
 
-# install cordova and ionic (beta version) globally
-npm install -g cordova
-npm install -g ionic@beta
+# git clone donderstarter
+cd /var/www/project
+git clone https://github.com/Cloudoki/react-redux-donderstarter.git
 
-# create a directory to store the data at and symlink it to home
-cd /vagrant
-mkdir -p hacks
-cd ~
-test -L hacks || ln -s /vagrant/hacks hacks
-
-# add plugin to folder
-cd hacks
-expect -c '
-set timeout -1   ;
-spawn ionic start hack_project blank
-expect {
-    "Would you like to overwrite the directory with this new project?" {
-      exp_send "yes\r" ; exp_continue
-    }
-    "Create an Ionic Platform account to add features like User Authentication, Push Notifications, Live Updating, iOS builds, and more?" {
-      exp_send "n\r" ; exp_continue
-    }
-}
-'
+# create a directory to store the data at and symlink it
+mkdir /home/vagrant/node_modules
+cd /var/www/project/react-redux-donderstarter
+ln -s /home/vagrant/node_modules node_modules
+npm install
+# npm run dev
